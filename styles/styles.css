@@ -1,0 +1,121 @@
+@import url('../globals.css');
+
+.form-container {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.form-container__img-box {
+	width: 400px;
+	position: absolute;
+	object-fit: contain;
+	border-radius: 16px;
+	overflow: hidden;
+	z-index: -1;
+	transition: transform 0.5s ease;
+	aspect-ratio: auto;
+}
+
+.form-container:hover .form-container__img-box {
+	transform: translateY(-350px);
+}
+
+.credit-card-form {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 750px;
+	margin: 0 auto;
+	padding: 2em;
+	border: 1px solid #e0e0e0;
+	border-radius: 8px;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+	background: linear-gradient(135deg, #a2e1f8, #f3c4fb);
+}
+
+.credit-card-form__title {
+	font-size: 3.5rem;
+	margin-bottom: 1em;
+	font-weight: bolder;
+	color: #d84c8d;
+	text-align: center;
+}
+
+.credit-card-form__group {
+	position: relative;
+	width: 100%;
+	margin-bottom: 2.5em;
+}
+
+.credit-card-form__box {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-bottom: 2.5em;
+	gap: 1em;
+}
+
+.credit-card-form__error {
+	position: absolute;
+	bottom: -1.5em;
+	left: 0;
+	color: #f44336;
+	font-size: 1.3rem;
+	font-weight: bolder;
+	visibility: hidden;
+	white-space: nowrap;
+	font-family: 'Nunito', sans-serif;
+}
+
+.credit-card-form__error.visible {
+	visibility: visible;
+}
+
+.credit-card-form__label {
+	margin-bottom: 0.5em;
+	font-weight: 600;
+	font-size: 1.8rem;
+	color: #ff6f61;
+}
+
+.credit-card-form__input {
+	width: 100%;
+	padding: 0.625em;
+	border: 1px solid #bdbdbd;
+	border-radius: 4px;
+	font-size: 1.6rem;
+	outline: none;
+	background-color: #ececec;
+	transition: border-color 0.3s;
+	font-family: 'Nunito', sans-serif;
+	transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+.credit-card-form__input:focus {
+	border-color: #ff78b7;
+	box-shadow: 0 0 5px rgba(255, 122, 189, 0.5);
+	transform: scale(1.01);
+}
+
+.credit-card-form__submit {
+	padding: 0.75em 3em;
+	background-color: #d84c8d;
+	color: #fff;
+	border: none;
+	border-radius: 10px;
+	font-size: 1.6rem;
+	cursor: pointer;
+	text-transform: uppercase;
+	transition: background-color 0.3s, transform 0.2s;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+	font-family: 'Playwrite GB S', cursive;
+}
+
+.credit-card-form__submit:hover {
+	background-color: #e91e63;
+	transform: scale(1.02);
+}

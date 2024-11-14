@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600;700;800;900&family=Playwrite+GB+S:wght@100;400&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="./js/index.js" defer></script>
+</head>
+
+<body>
+    <div class="form-container">
+        <div class="form-container__img-box">
+            <img class="form-container__img" src="./imgs/Anime credit card - らきすた.jfif"
+                alt="credit card with anime girl">
+        </div>
+
+        <form novalidate class="credit-card-form" id="creditCardForm" aria-labelledby="creditCardFormTitle">
+            <h1 class="credit-card-form__title" id="creditCardFormTitle">Credit Card Payment Form</h1>
+            <div class="credit-card-form__box">
+                <div class="credit-card-form__group">
+                    <label class="credit-card-form__label" for="cardNumber">Card Number:</label>
+                    <input class="credit-card-form__input" type="text" id="cardNumber" name="cardNumber" required
+                        aria-required="true" inputmode="numeric" pattern="[0-9\s]{16}"
+                        title="Please enter a valid card number" placeholder="XXXX-XXXX-XXXX-XXXX">
+                    <small class="credit-card-form__error"></small>
+                </div>
+                <div class="credit-card-form__group">
+                    <label class="credit-card-form__label" for="cardName">Card Name:</label>
+                    <input class="credit-card-form__input" type="text" id="cardName" name="cardName" required
+                        aria-required="true" pattern="[A-Za-z\s]+" title="Please enter a valid name"
+                        placeholder="Enter Name on Card">
+                    <small class="credit-card-form__error"></small>
+                </div>
+            </div>
+            <div class="credit-card-form__box">
+                <div class="credit-card-form__group">
+                    <label class="credit-card-form__label" for="expirationMonth">Month:</label>
+                    <input class="credit-card-form__input credit-card-form__input--month" type="text"
+                        id="expirationMonth" name="expirationMonth" maxlength="2" required aria-required="true"
+                        inputmode="numeric" pattern="0[1-9]|1[0-2]" title="Please enter a valid month (01-12)"
+                        placeholder="MM">
+                    <small class="credit-card-form__error"></small>
+                </div>
+                <div class="credit-card-form__group">
+                    <label class="credit-card-form__label" for="expirationYear">Year:</label>
+                    <input class="credit-card-form__input credit-card-form__input--year" type="text" id="expirationYear"
+                        name="expirationYear" maxlength="4" required aria-required="true" inputmode="numeric"
+                        pattern="\d{4}" title="Please enter a valid year" placeholder="YYYY">
+                    <small class="credit-card-form__error"></small>
+                </div>
+                <div class="credit-card-form__group">
+                    <label class="credit-card-form__label" for="cvv">CVV:</label>
+                    <input class="credit-card-form__input credit-card-form__input--cvv" type="text" id="cvv" name="cvv"
+                        maxlength="3" required aria-required="true" inputmode="numeric" pattern="\d{3}"
+                        title="Please enter a valid 3-digit CVV code" placeholder="Last 3 digits on back of card">
+                    <small class="credit-card-form__error"></small>
+                </div>
+            </div>
+            <button class="credit-card-form__submit" type="submit" aria-label="Submit Credit Card Payment">
+                Submit
+            </button>
+        </form>
+    </div>
+</body>
+
+</html>
